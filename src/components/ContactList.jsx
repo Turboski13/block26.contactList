@@ -1,5 +1,4 @@
 import React from "react"; 
-import {useEffect} from 'react';
 import ContactRow from "./components/ContactRow.jsx"; 
 
 
@@ -9,9 +8,9 @@ const dummyContacts = [
     { id: 3, name: "BB-8", phone: "888-888-8888", email: "bb8@droids.com" },
   ];
 
-export default function ContactList({ setSelectedContactId, contact })) { 
+export default function ContactList({ setSelectedContactId, contact }) { 
     const [contacts, setContacts] = useState(dummyContacts);
-    ContactList setSelectedContactId={setSelectedContactId}
+
     useEffect(() => {
         async function fetchContacts() {
           try {
