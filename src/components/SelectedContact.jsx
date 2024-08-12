@@ -4,18 +4,18 @@ export default function selectedContactId() {
     const [selectedContactID, setSelectedContactId] = useState(null);
 
     useEffect(() => {
-        async function fetchContact() {
+        async function fetchContacts() {
             try {
                 const response = await fetch(
                     `https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users/${contactId}`
                 );
                 const result = await response.json();
-                setContact(result);
+                setContacts(result);
             } catch (error) {
                 console.error(error);
             }
         }
-        fetchContact();
+        fetchContacts();
     }, [contactId]);
 
     if (!contact) {
@@ -31,3 +31,5 @@ export default function selectedContactId() {
       </tr>
     );
   }
+
+  
